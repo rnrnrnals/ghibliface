@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        />
+
+        <title>지브리 닮은꼴</title>
+        <link rel="stylesheet" href="style.css" />
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-624809a25d123f36"></script>
+
+    </head>
+<div id="modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width: 80%; margin: 20rem auto;">
+            <div class="modal-header">
+                <h5 class="modal-title" style="margin-left: 45%;">Tips!</h5>
+            </div>
+            <img src="img\modal.png" class="upload2 " style="width: 80%; margin: 2.6rem;">
+            <div class="modal-body" style="text-align: center;">
+                <p>촬영시 정면을 봐주세요.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light nav-distance">
+            <div class="container-fluid">
+                <a class="navbar-brand" onclick="location.reload()" href="#">지브리 닮은꼴</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" onclick="location.reload()" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Help</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <section class="section">
+            <h1 class="title">지브리 닮은꼴 테스트</h1>
+            <h2 class="subtitle">내가 지브리에 나온다면?</h2>
+        </section>
+        <script
+            class="jsbin"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+        ></script>
+        <div class="container file-upload">
+            <div class="image-upload-wrap">
+                <input
+                    class="file-upload-input"
+                    type="file"
+                    onchange="readURL(this);"
+                    accept="image/*"
+                />
+                <div class="drag-text">
+                    <img src="img/upload.jpg" class="mt-5 pt-5 upload" style="width: 80%;" />
+                    <h3 class="mb-5 pb-5 pt-4 upload-text">
+                        얼굴 사진을 올려놓거나 눌러서 업로드하세요!
+                    </h3>
+                </div>
+            </div>
+            <div class="file-upload-content">
+                <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+                <div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only"></span>
+                </div>
+                <p class="text-center">지브리 세계로 들어가는 중</p>
+            </div>
+                <p class="result-message"></p>
+                <div id="label-container"></div>
+                
+        <img src="img/zlzl.gif" id="one" style="display:none"/>
+        <p class="zlzldnjs" id="one1" style="display:none">  축하합니다!<br> 빗자루 타기를 마스터한 당신은 배달업계 독보적 1위가 되어 부자가 됩니다.  </p>
+        <img src="img/gkzn.gif" id="two" style="display:none"/>
+                <p class="zlzldnjs" id="two1" style="display:none">  겉으론 무뚝뚝해 보이지만 그 누구보다 순수한 마음을 지녔습니다.  </p>
+        <img src="img/gkdnf.gif" id="three" style="display:none"/>
+                <p class="zlzldnjs" id="three1" style="display:none">  왕자님 포스로 수 많은 여성과 소녀들의 마음을 사로잡은 당신은 만인의 첫사랑.  </p>
+        <img src="img/dktlxkzk.gif" id="four" style="display:none"/>
+                <p class="zlzldnjs" id="four1" style="display:none">  용맹하고 선한 성격에 더해 꽃미남이란 말을 대놓고 듣고 다니는 당신은 그야말로 사기 캐릭터.  </p>
+        <img src="img/vkwm.gif" id="five" style="display:none"/>
+                <p class="zlzldnjs" id="five1" style="display:none">  특유의 밝은 모습이 주변 사람들을 기분 좋게 만듭니다.  </p>
+        <img src="img/tydn.gif" id="six" style="display:none"/>
+                <p class="zlzldnjs" id="six1" style="display:none">  당신은 사람 미치게 만드는 병약미소년 끝판왕입니다. 건강하세요.  </p>
+        <img src="img/tpdlwl.gif" id="seven" style="display:none"/>
+                <p class="zlzldnjs" id="seven1" style="display:none">  공부도 잘 하고 얼굴도 잘생긴 당신은 엄친아의 정석입니다.  </p>
+        <img src="img/qkfhs.gif" id="eight" style="display:none"/>
+                <p class="zlzldnjs" id="eight1" style="display:none">  사람은 모르겠고 고양이들한텐 인기가 많겠어요.  </p>
+        <img src="img/ghflzhtl wlfh.gif" id="nine" style="display:none"/>
+                <p class="zlzldnjs" id="nine1" style="display:none">  동글뱅이 안경이 잘 어울리는 얼굴입니다.  </p>
+        <img src="img/ahfltkzl xkzn.gif" id="ten" style="display:none"/>
+                <p class="zlzldnjs" id="ten1" style="display:none">  당신은 학창시절 첫 사랑을 떠오르게 합니다.  </p>
+        <img src="img/anxh flzkzh.gif" id="eleven" style="display:none"/>
+                <p class="zlzldnjs" id="eleven1" style="display:none">  주변에 한 명쯤 있을만한 성격 이상한 친구  </p>
+        <img src="img/skdntlzk.gif" id="twelve" style="display:none"/>
+                <p class="zlzldnjs" id="twelve1" style="display:none">  사람들을 휘어잡는 성격과 외모로 주변에서 우러러봅니다.  </p>
+        <img src="img/thvl.gif" id="thirteen" style="display:none"/>
+                <p class="zlzldnjs" id="thirteen1" style="display:none">  누구보다 강인하고 단단한 당신은 전형적인 미인상으로 한번 당신과 마주친 사람은 쉽게 빠져나올 수 없습니다.  </p>
+        <img src="img/clglfh.gif" id="fourteen" style="display:none"/>
+                <p class="zlzldnjs" id="fourteen1" style="display:none">  남을 도울 줄 알고 배려심이 깊은 당신은 괜히 장난치고 싶어지는 어릴 적 짝사랑을 닮았습니다.  </p>
+        <img src="img/tks.gif" id="fifteen" style="display:none"/>
+                <p class="zlzldnjs" id="fifteen1" style="display:none">  화려한 공주 외모로 인기가 많지만 인간따윈 믿지 않는 당신.  </p>
+        <img src="img/dkfldpxl.gif" id="sixteen" style="display:none"/>
+                <p class="zlzldnjs" id="sixteen1" style="display:none">  시원하고 귀여운 외모로 모든이가 주머니에 넣고 다니고 싶어합니다.  </p>
+        <img src="img/akeka wlsk.gif" id="seventeen" style="display:none"/>
+                <p class="zlzldnjs" id="seventeen1" style="display:none">  팜므파탈 그 자체  </p>
+        <img src="img/gkfn.gif" id="eighteen" style="display:none"/>
+                <p class="zlzldnjs" id="eighteen1" style="display:none">  주변에 한 명쯤 있을만한 밝은 친구  </p>
+        <img src="img/gkfn clsrn.gif" id="nineteen" style="display:none"/>
+                <p class="zlzldnjs" id="nineteen1" style="display:none">  주변에 한 명쯤 있을만한 밝은 친구와 다니는 친구  </p>
+        <img src="img/anfrhrl vhsy.gif" id="twenty" style="display:none"/>
+                <p class="zlzldnjs" id="twenty1" style="display:none">  새끼 물고기같은 당신  </p>
+        <img src="img/thsu vhsy.gif" id="twenty one" style="display:none"/>
+                <p class="zlzldnjs" id="twenty one1" style="display:none">  귀여움의 끝판왕입니다. 당신을 소유하려는 사람을 조심하세요.  </p>
+        <img src="img/vhsyehdtod.gif" id="twenty two" style="display:none"/>
+                <p class="zlzldnjs" id="twenty two1" style="display:none">  존재감은 없지만 꼭 필요한 존재입니다.  </p>
+        <img src="img/gnwlahxh.gif" id="twenty three" style="display:none"/>
+                <p class="zlzldnjs" id="twenty three1" style="display:none">  바다 여신도 반할만한 매력적인 코를 가지셨군요!  </p>
+        <img src="img/qkekdutls.gif" id="twenty four" style="display:none"/>
+                <p class="zlzldnjs" id="twenty four1" style="display:none">  어딜가도 여신 소리를 듣는 당신. 귀찮게 하는 남자들 때문에 피곤하시군요.  </p>
+        <img src="img/rjal.gif" id="twenty five" style="display:none"/>
+                <p class="zlzldnjs" id="twenty five1" style="display:none">  팔이 많아 효율성있는 삶을 보낼 수 있습니다.  </p>
+        <img src="img/ehowl.gif" id="twenty six" style="display:none"/>
+                <p class="zlzldnjs" id="twenty six1" style="display:none">  그만 먹어  </p>
+        <img src="img/rkdhsktl.gif" id="twenty seven" style="display:none"/>
+                <p class="zlzldnjs" id="twenty seven1" style="display:none">  당신을 보면 무슨 생각을 하는지 알 수가 없군요.  </p>
+        <img src="img/qhdn.gif" id="twenty eight" style="display:none"/>
+                <p class="zlzldnjs" id="twenty eight1" style="display:none">  매력적인 볼살을 가지셨군요!  </p>
+        <img src="img/zhd.gif" id="twenty nine" style="display:none"/>
+                <p class="zlzldnjs" id="twenty nine1" style="display:none">  무서워..  </p>
+        <img src="img/zms dkrl.gif" id="thirty" style="display:none"/>
+                <p class="zlzldnjs" id="thirty1" style="display:none">  우량아로 태어나셨나봐요!  </p>
+        <img src="img/gkfajsl.gif" id="thirty one" style="display:none"/>
+                <p class="zlzldnjs" id="thirty one1" style="display:none">  화끈한 성격의 소유자! 너무 과하면 주변에서 피할 수 있습니다!  </p>
+        <img src="img/tkcmzl.gif" id="thirty two" style="display:none"/>
+                <p class="zlzldnjs" id="thirty two1" style="display:none">  짧은 머리가 잘 어울리는 당신! 한 번 빠지면 헤어나오기 어렵습니다.  </p>
+        <img src="img/xhxhfh.gif" id="thirty three" style="display:none"/>
+                <p class="zlzldnjs" id="thirty three1" style="display:none">  당신의 호탕한 웃음에 내 마음을 빼았겼어요..  </p>
+        <img src="img/rhdiddl qjtm.gif" id="thirty four" style="display:none"/>
+                <p class="zlzldnjs" id="thirty four1" style="display:none">  마을 버스만큼 매력있네요.  </p>
+        <img src="img/thvl todjaak.gif" id="thirty five" style="display:none"/>
+                <p class="zlzldnjs" id="thirty five1" style="display:none">  가족을 사랑하는 마음이 느껴지는 외모입니다.  </p>
+        <img src="img/gjtndkql.gif" id="thirty six" style="display:none"/>
+                <p class="zlzldnjs" id="thirty six1" style="display:none">  약간 허수아비 닮으셨네요?  </p>
+        <img src="img/wjfadms ghkddidml aksu.gif" id="thirty seven" style="display:none"/>
+                <p class="zlzldnjs" id="thirty seven1" style="display:none">  운동은 성인병 예방에 좋습니다!  </p>
+        <img src="img/smfrdms ghkddidml aksu.gif" id="thirty eight" style="display:none"/>
+                <p class="zlzldnjs" id="thirty eight1" style="display:none">  건강 챙기세요!  </p>
+        <img src="img/rnsdls.gif" id="thirty nine" style="display:none"/>
+                <p class="zlzldnjs" id="thirty nine1" style="display:none">  누구세요?  </p>
+        <img src="img/smreo.gif" id="forty" style="display:none"/>
+                <p class="zlzldnjs" id="forty1" style="display:none">  용맹하지만 경계가 많아 보입니다.  </p>
+        <img src="img/dhtzhxhsntl.gif" id="forty one" style="display:none"/>
+                <p class="zlzldnjs" id="forty one1" style="display:none">  등산할때 조심하세요!  </p>
+        <img src="img/glapskawk.gif" id="forty two" style="display:none"/>
+                <p class="zlzldnjs" id="forty two1" style="display:none">  처음 봤을 땐 경계가 되지만 알고보면 마음이 넓고 따뜻합니다. 사람들에게 다가가려고 노력해 보세요. </p>
+        <img src="img/fhqls.jpg" id="forty three" style="display:none"/>
+                <p class="zlzldnjs" id="forty three1" style="display:none">  누구세요?  </p>
+        <img src="img/dhdlfska.jpg" id="forty four" style="display:none"/>
+                <p class="zlzldnjs" id="forty four1" style="display:none">  누구세요?  </p>
+        <img src="img/shghdcjf.gif" id="forty five" style="display:none"/>
+                <p class="zlzldnjs" id="forty five1" style="display:none">  누구세요?  </p>
+        <img src="img/rktkehdnal.gif" id="forty six" style="display:none"/>
+                <p class="zlzldnjs" id="forty six1" style="display:none">  오지라퍼의 느낌이.. 조금.. 있습니다.  </p>
+        <img src="img/alTmqltl.gif" id="forty seven" style="display:none"/>
+                <p class="zlzldnjs" id="forty seven1" style="display:none">  시원한 투블럭이 매력적인 당신! 알고보면 여심폭격기?!  </p>
+        <img src="img/ehfk.gif" id="forty eight" style="display:none"/>
+                <p class="zlzldnjs" id="forty eight1" style="display:none">  괴팍한 성격탓에 주변에서 몰래 흉을 볼 수도 있습니다.  </p>
+        <img src="img/qltj.gif" id="forty nine" style="display:none"/>
+                <p class="zlzldnjs" id="forty nine1" style="display:none">  가르마가 매력적인 당신! 스타일을 좀 바꿔보는 건 어떨까요?  </p>
+        <img src="img/apdl.gif" id="fifty" style="display:none"/>
+                <p class="zlzldnjs" id="fifty1" style="display:none">  당신은 챙겨주고 보호해 주고 싶게 만드는군요.  </p>
+                    
+              
+                
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+            
+                <div class="image-title-wrap">
+                    <button type="button" onclick="location.reload()" class="remove-image">
+                        다른 사진으로 재시도 
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="webcam-container"></div>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+        <script>
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.image-upload-wrap').hide();
+$('#loading').show();
+                        $('.file-upload-image').attr('src', e.target.result);
+                        $('.file-upload-content').show();
+
+                        $('.image-title').html(input.files[0].name);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                    init().then(() => {
+                        console.log('hello'); 
+                        predict();
+                        $('#loading').hide();
+                    });
+                } else {
+                    removeUpload();
+                }
+            }
+
+            function removeUpload() {
+                $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+                $('.file-upload-content').hide();
+                $('.image-upload-wrap').show();
+            }
+            $('.image-upload-wrap').bind('dragover', function () {
+                $('.image-upload-wrap').addClass('image-dropping');
+            });
+            $('.image-upload-wrap').bind('dragleave', function () {
+                $('.image-upload-wrap').removeClass('image-dropping');
+            });
+        </script>
+        <script type="text/javascript">
+            // More API functions here:
+            // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+            // the link to your model provided by Teachable Machine export panel
+            const URL = 'https://teachablemachine.withgoogle.com/models/uDpyyzViLt/';
+
+            let model, webcam, labelContainer, maxPredictions;
+
+            // Load the image model and setup the webcam
+            async function init() {
+                const modelURL = URL + 'model.json';
+                const metadataURL = URL + 'metadata.json';
+
+                // load the model and metadata
+                // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+                // or files from your local hard drive
+                // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+                model = await tmImage.load(modelURL, metadataURL);
+                maxPredictions = model.getTotalClasses();
+                labelContainer = document.getElementById('label-container');
+                for (let i = 0; i < 1; i++) {
+                    // and class labels
+                    labelContainer.appendChild(document.createElement('div'));
+                }
+            }
+            // run the webcam image through the image model
+            async function predict() {
+                // predict can take in an image, video or canvas html element
+                var image = document.getElementById('face-image');
+                const prediction = await model.predict(image, false);
+                prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+                console.log(prediction[0].className);
+                var resultTitle, resultExplain;
+                switch (prediction[0].className) {
+                    case '키키':
+                        resultTitle = '마녀배달부 키키'
+                        resultExplain = '키키'
+                        document.getElementById("one").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("one1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                    case '하쿠':
+                        resultTitle = '센과 치히로의 행방불명'
+                        resultExplain = '하쿠'
+                        document.getElementById("two").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("two1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                    case '하울':
+                        resultTitle = '하울의 움직이는 성'
+                        resultExplain = '하울'
+                        document.getElementById("three").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("three1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                    case '아시타카':
+                        resultTitle = '오카다 켄시'
+                        resultExplain = '아시타카'
+                        document.getElementById("four").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("four1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                    case '파즈':
+                        resultTitle = '천공의 성 라퓨타'
+                        resultExplain = '파즈'
+                        document.getElementById("five").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("five1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                    case '쇼우':
+                        resultTitle = '마루 밑 아리에티'
+                        resultExplain = '쇼우'
+                        document.getElementById("six").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("six1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                    case '세이지':
+                        resultTitle = '귀를 기울이면'
+                        resultExplain = '세이지'
+                        document.getElementById("seven").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("seven1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                     case '바론':
+                        resultTitle = '고양이의 보은'
+                        resultExplain = '바론'
+                        document.getElementById("eight").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("eight1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                     case '호리코시 지로':
+                        resultTitle = '바람이 분다'
+                        resultExplain = '호리코시 지로'
+                        document.getElementById("nine").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("nine1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                     case '모리사키 타쿠':
+                        resultTitle = '바다가 들린다'
+                        resultExplain = '모리사키 타쿠'
+                        document.getElementById("ten").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("ten1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                     case '무토 리카코':
+                        resultTitle = '바다가 들린다'
+                        resultExplain = '무토 리카코'
+                        document.getElementById("eleven").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("eleven1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '나우시카':
+                        resultTitle = '바람계곡의 나우시카'
+                        resultExplain = '나우시카'
+                        document.getElementById("twelve").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("twelve1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '젊은 소피':
+                        resultTitle = '하울의 움직이는 성'
+                        resultExplain = '소피'
+                        document.getElementById("thirteen").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("thirteen1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '치히로':
+                        resultTitle = '센과 치히로의 행방불명'
+                        resultExplain = '치히로'
+                        document.getElementById("fourteen").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("fourteen1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '산':
+                        resultTitle = '모노노케 히메'
+                        resultExplain = '산'
+                        document.getElementById("fifteen").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("fifteen1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '아리에티':
+                        resultTitle = '마루 밑 아리에티'
+                        resultExplain = '아리에티'
+                        document.getElementById("sixteen").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("sixteen1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '마담 지나':
+                        resultTitle = '붉은 돼지'
+                        resultExplain = '마단 지나'
+                        document.getElementById("seventeen").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("seventeen1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '하루':
+                        resultTitle = '고양이의 보은'
+                        resultExplain = '하루'
+                        document.getElementById("eighteen").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("eighteen1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '하루 친구':
+                        resultTitle = '고양이의 보은'
+                        resultExplain = '하루 친구'
+                        document.getElementById("nineteen").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("nineteen1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '물고기 포뇨':
+                        resultTitle = '벼랑위의 포뇨'
+                        resultExplain = '물고기 포뇨'
+                        document.getElementById("twenty").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("twenty1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '소녀 포뇨':
+                        resultTitle = '벼랑위의 포뇨'
+                        resultExplain = '소녀 포뇨'
+                        document.getElementById("twenty one").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("twenty one1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '포뇨 16번째 동생':
+                        resultTitle = '벼랑위의 포뇨'
+                        resultExplain = '포뇨 102번째 동생'
+                        document.getElementById("twenty two").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("twenty two1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '후지모토':
+                        resultTitle = '벼랑위의 포뇨'
+                        resultExplain = '후지모토'
+                        document.getElementById("twenty three").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("twenty three1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '바다 여신':
+                        resultTitle = '벼랑위의 포뇨'
+                        resultExplain = '바다 여신'
+                        document.getElementById("twenty four").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("twenty four1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '거미':
+                        resultTitle = '센과 치히로의 행방불명'
+                        resultExplain = '가마 할아범'
+                        document.getElementById("twenty five").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("twenty five1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '돼지':
+                        resultTitle = '센과 치히로의 행방불명'
+                        resultExplain = '돼지'
+                        document.getElementById("twenty six").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("twenty six1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '가오나시':
+                        resultTitle = '센과 치히로의 행방불명'
+                        resultExplain = '가오나시'
+                        document.getElementById("twenty seven").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("twenty seven1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '보우':
+                        resultTitle = '센과 치히로의 행방불명'
+                        resultExplain = '쥐 보우'
+                        document.getElementById("twenty eight").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("twenty eight1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '콩':
+                        resultTitle = '센과 치히로의 행방불명'
+                        resultExplain = '카시라'
+                        document.getElementById("twenty nine").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("twenty nine1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                                            case '큰 아기':
+                        resultTitle = '센과 치히로의 행방불명'
+                        resultExplain = '아기 보우'
+                        document.getElementById("thirty").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("thirty1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                        case '할머니':
+                        resultTitle = '센과 치히로의 행방불명'
+                        resultExplain = '유바바'
+                        document.getElementById("thirty one").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("thirty one1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                        case '사츠키':
+                        resultTitle = '이웃집 토토로'
+                        resultExplain = '사츠키'
+                        document.getElementById("thirty two").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("thirty two1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                        case '토토로':
+                        resultTitle = '이웃집 토토로'
+                        resultExplain = '토토로'
+                        document.getElementById("thirty three").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("thirty three1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                        case '고양이 버스':
+                        resultTitle = '이웃집 토토로'
+                        resultExplain = '고양이 버스'
+                        document.getElementById("thirty four").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("thirty four1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                        case '소피 새엄마':
+                        resultTitle = '하울의 움직이는 성'
+                        resultExplain = '소피 새엄마'
+                        document.getElementById("thirty five").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("thirty five1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                        case '허수아비':
+                        resultTitle = '하울의 움직이는 성'
+                        resultExplain = '허수아비'
+                        document.getElementById("thirty six").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("thirty six1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                        case '젊은 황야의 마녀':
+                        resultTitle = '하울의 움직이는 성'
+                        resultExplain = '젊은 황야의 마녀'
+                        document.getElementById("thirty seven").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("thirty seven1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                        case '나이든 황야의 마녀':
+                        resultTitle = '하울의 움직이는 성'
+                        resultExplain = '늙은 황야의 마녀'
+                        document.getElementById("thirty eight").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("thirty eight1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                        case '26분 23초 군인':
+                        resultTitle = '하울의 움직이는 성'
+                        resultExplain = '26분 23초에 등장하는 군인'
+                        document.getElementById("thirty nine").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("thirty nine1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                        case '늑대':
+                        resultTitle = '모노노케 히메'
+                        resultExplain = '모로'
+                        document.getElementById("forty").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("forty1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                        case '옷코토누시':
+                        resultTitle = '모노노케 히메'
+                        resultExplain = '옷코토누시'
+                        document.getElementById("forty one").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("forty one1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                    case '1:15:55 남자':
+                        resultTitle = '모노노케 히메'
+                        resultExplain = '지코보'
+                        document.getElementById("forty two").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("forty two1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                    case '1:34:34 남자':
+                        resultTitle = '마녀배달부 키키'
+                        resultExplain = '1:34:34에 등장하는 남자'
+                        document.getElementById("forty three").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("forty three1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                    case '1:34:36 남자':
+                        resultTitle = '마녀배달부 키키'
+                        resultExplain = '1:34:36에 등장하는 남자'
+                        document.getElementById("forty four").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("forty four1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                    case '1:35:14 남자':
+                        resultTitle = '마녀배달부 키키'
+                        resultExplain = '1:35:14에 등장하는 남자'
+                        document.getElementById("forty five").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("forty five1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                         case '가사도우미':
+                        resultTitle = '마루 밑 아리에티'
+                        resultExplain = '가사도우미'
+                        document.getElementById("forty six").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("forty six1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                         case '미쓰비시':
+                        resultTitle = '바람이 분다'
+                        resultExplain = '미쓰비시'
+                        document.getElementById("forty seven").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("forty seven1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                         case '도라':
+                        resultTitle = '천공의 성 라퓨타'
+                        resultExplain = '도라'
+                        document.getElementById("forty eight").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("forty eight1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                         case '뚱뚱한 비서 고양이':
+                        resultTitle = '고양이의 보은'
+                        resultExplain = '비서 고양이'
+                        document.getElementById("forty nine").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("forty nine1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                        case '메이':
+                        resultTitle = '이웃집 토토로'
+                        resultExplain = '메이'
+                        document.getElementById("fifty").style="margin: auto; padding: 10px; max-width: 60%; max-height: 60%; vertical-align: middle;"
+                        document.getElementById("fifty1").style="margin: auto padding: 1rem; margin-top: 1rem;"
+                        break;
+                    default:
+                        resultTitle = '다시 시도해 주세요.'
+                    // code block
+                }
+                  var title = "<div class='" + prediction[0].className + "title'>" + resultTitle + "</div>"
+            var explain = "<div class='explain pt-2'>" + resultExplain + "</div>"
+            $('.result-message').html(title + explain);
+            var barWidth;
+                for (let i = 0; i < maxPredictions; i++) {
+                    const classPrediction =
+                    labelContainer.childNodes[i].innerHTML = classPrediction;
+                }
+            }
+           
+        </script>
+        
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('#modal').modal('show');
+    });
+</script>
+<script>    
+    document.oncontextmenu=new Function("event.returnValue=false");
+    document.onselectstart=new Function("event.returnValue=false");
+</script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+    <!-- Copyright (c) 2022 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ -->
+</html>
